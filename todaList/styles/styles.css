@@ -1,0 +1,144 @@
+body {
+  color: #767678;
+  font-family: sans-serif;
+  font-size: medium;
+  margin: 0;
+}
+
+.ml-10, .left-container .left-block-class .category span, .left-container .newTask .task .taskAddition span {
+  margin-left: 10px;
+}
+
+.todo-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0078D7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+}
+
+.todo-header i {
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.todo-header i:hover {
+  background-color: rgba(27, 27, 83, 0.719);
+}
+
+.todo-header .app-name {
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 20px;
+}
+
+.todo-header .search {
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 30px;
+  margin: auto;
+  width: 30%;
+}
+
+.todo-header .search i {
+  color: #7ca4ca;
+  padding: 7px;
+  vertical-align: top;
+}
+
+.todo-header .search i:hover {
+  background-color: white;
+}
+
+.todo-header .search .search-text {
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  height: 28px;
+  outline: none;
+  vertical-align: top;
+  width: 75%;
+}
+
+.left-container {
+  background-color: #f4f4f5;
+  display: inline-block;
+  height: 90vh;
+  vertical-align: top;
+  width: 22%;
+}
+
+.left-container .left-block-class {
+  margin-top: 40px;
+}
+
+.left-container .left-block-class :hover {
+  background-color: rgba(255, 255, 255, 0.829);
+}
+
+.left-container .left-block-class .category {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 20px 15px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.left-container .newTask {
+  color: #465efc;
+  margin-top: 20px;
+  padding: 20px 15px;
+}
+
+.left-container .newTask .task {
+  background-color: #f4f4f5;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  height: 20px;
+}
+
+.left-container .newTask .task .taskAddition {
+  cursor: pointer;
+  margin: 25px 0px 0px 15px;
+}
+
+.left-container .newTask ::-webkit-input-placeholder {
+  color: #465efc;
+}
+
+.left-container .newTask :-ms-input-placeholder {
+  color: #465efc;
+}
+
+.left-container .newTask ::-ms-input-placeholder {
+  color: #465efc;
+}
+
+.left-container .newTask ::placeholder {
+  color: #465efc;
+}
+
+.left-container .newTask .btn {
+  border: none;
+  color: #465efc;
+  font-size: 20px;
+  margin-left: 10px;
+  outline: none;
+}
+
+.left-container .newTask:hover {
+  background-color: rgba(255, 255, 255, 0.829);
+}
+
+.left-container .newTask:hover .task {
+  background-color: rgba(255, 255, 255, 0.829);
+}
+/*# sourceMappingURL=styles.css.map */
