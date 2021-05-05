@@ -19,21 +19,39 @@
             <h3 class="app-name">To Do</h3>
             <div class="search">
                 <i class="fa fa-search"></i><input type="text" class="search-text" placeholder="Search">
+                <!-- <span class="search-tooltip">Search</span> -->
             </div>
         </div>
         <div class="todo-body">
-            <div class="left-container">
-                <div class="left-toggle-bar">
+            <div class="left-container-class" id="left-container">
+                <div class="left-section-class" id="left-section">
+                    <button class="toggle-button-class" id="toggle-button"><i class="fa fa-chevron-left"></i></button>
+                    <div id="left-block" class="left-block-class">
+                    </div>
+                    <div class="newTask">
+                        <i class='fa fa-plus'></i>
+                        <input type='text' class='task' id="add-task" placeholder='New list'>
+                        <button class='btn' id="add-btn"><i class="fa fa-tasks"></i></button>
+                    </div>
                 </div>
-                <div id="left-block" class="left-block-class">
+            </div>
+            <div class="right-container">
+                <div class="right-top-container" id="right-top-block">
+                    <div class="right-heading-class" id="right-heading">
+                    </div>
                 </div>
-                <div class="newTask">
-                    <i class='fa fa-plus'></i>
-                    <input type='text' class='task' id="add-task" placeholder='New list'>
-                    <button class='btn' id="add-btn"><i class="fa fa-tasks"></i></button>
+                <div class="right-bottom-container" id="right-bottom-block">
+                    <div class="right-input-class" id="right-input">
+                        <i class="fa fa-plus"></i>
+                        <input type="text" class="sub-task-class" id="sub-task" placeholder="Add a task">
+                        <span><button class="add-subtask-btn" id="add-task-btn">ADD</button></span>
+                    </div>
+                    <div class="task-line"></div>
+                    <div class="sub-task-container" id="sub-task-block"></div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <script src="js/app.js"></script>
 </body>

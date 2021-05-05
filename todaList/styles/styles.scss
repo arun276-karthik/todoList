@@ -1,3 +1,5 @@
+@import "/Users/Admin/frontend/resume/assets/fonts";
+@import "/Users/Admin/frontend/todaList/assets/variables";
 body {
     color: #767678;
     font-family: sans-serif;
@@ -6,7 +8,7 @@ body {
 }
 
 .ml-10 {
-    margin-left: 10px;
+    margin-left: 10px !important;
 }
 
 .todo-header {
@@ -15,7 +17,7 @@ body {
     display: flex;
     height: 50px;
     i {
-        color: white;
+        color: $white;
         cursor: pointer;
         padding: 20px;
     }
@@ -23,26 +25,27 @@ body {
         background-color: rgba(27, 27, 83, 0.719);
     }
     .app-name {
-        color: white;
+        color: $white;
         cursor: pointer;
         font-size: 15px;
         margin: 20px;
     }
     .search {
-        background-color: white;
+        background-color: $white;
         border: none;
         border-radius: 2px;
         display: inline-block;
         height: 30px;
         margin: auto;
         width: 30%;
+        position: relative;
         i {
             color: rgb(124, 164, 202);
             padding: 7px;
             vertical-align: top;
         }
         i:hover {
-            background-color: white;
+            background-color: $white;
         }
         .search-text {
             // margin: 10px;
@@ -57,37 +60,41 @@ body {
     }
 }
 
-.left-container {
-    background-color: #f4f4f5;
-    display: inline-block;
-    height: 90vh;
-    vertical-align: top;
-    width: 22%;
-    .left-block-class {
-        margin-top: 40px;
-         :hover {
-            background-color: rgba(255, 255, 255, 0.829);
-        }
-        .category {
-            cursor: pointer;
-            font-size: 14px;
-            padding: 20px 15px;
-            transition-duration: 0.2s;
-            span {
-                @extend .ml-10;
+.todo-body {
+    display: flex;
+    .left-container-class {
+        background-color: #f4f4f5;
+        height: 100vh;
+        width: 25%;
+        margin: 0px;
+        display: flex;
+        .left-section-class {
+            .toggle-button-class {
+                border: none;
+                outline: none;
+                font-size: 20px;
+                margin: 10px;
             }
-        }
-    }
-    .newTask {
-        color: #465efc;
-        margin-top: 20px;
-        padding: 20px 15px;
-        .task {
-            background-color: #f4f4f5;
-            border: none;
-            outline: none;
-            font-size: 15px;
-            height: 20px;
+             :hover {
+                background-color: rgba(211, 211, 211, 0.39);
+                box-shadow: lightgrey;
+                cursor: pointer;
+            }
+            .left-block-class {
+                margin-top: 40px;
+                 :hover {
+                    background-color: rgba(255, 255, 255, 0.829);
+                }
+                .category {
+                    cursor: pointer;
+                    font-size: 14px;
+                    padding: 20px 17px;
+                    transition-duration: 0.2s;
+                    span {
+                        @extend .ml-10;
+                    }
+                }
+            }
             .taskAddition {
                 span {
                     @extend .ml-10;
@@ -95,22 +102,108 @@ body {
                 cursor: pointer;
                 margin: 25px 0px 0px 15px;
             }
-        }
-         ::placeholder {
-            color: #465efc;
-        }
-        .btn {
-            border: none;
-            color: #465efc;
-            font-size: 20px;
-            margin-left: 10px;
-            outline: none;
+            .newTask {
+                display: flex;
+                color: $todoBlue;
+                margin-top: 20px;
+                padding: 20px 15px;
+                .task {
+                    margin-left: 10px;
+                    background-color: #f4f4f5;
+                    border: none;
+                    outline: none;
+                    font-size: 15px;
+                    height: 20px;
+                }
+                 ::placeholder {
+                    color: $todoBlue;
+                }
+                .btn {
+                    border: none;
+                    color: $todoBlue;
+                    font-size: 20px;
+                    margin-left: 10px;
+                    outline: none;
+                }
+            }
+            .newTask:hover {
+                background-color: rgba(255, 255, 255, 0.829);
+                .task {
+                    background-color: rgba(255, 255, 255, 0.829);
+                }
+            }
         }
     }
-    .newTask:hover {
-        background-color: rgba(255, 255, 255, 0.829);
-        .task {
-            background-color: rgba(255, 255, 255, 0.829);
+    .right-container {
+        width: 100%;
+        background-color: $white;
+        .right-top-container {
+            width: 100%;
+            height: 10vh;
+            margin: 0px;
+            .right-heading-class {
+                margin: 30px 20px;
+                color: $todoBlue;
+                font-weight: 300;
+            }
+        }
+        .right-bottom-container {
+            background-color: $white;
+            width: 100%;
+            height: 10vh;
+            margin: 0px;
+            .right-input-class {
+                margin-left: 20px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                .fa-plus {
+                    font-size: 20px;
+                    color: $todoBlue;
+                }
+                .sub-task-class {
+                    border: none;
+                    outline: none;
+                    font-size: 17px;
+                    font-weight: 100;
+                    margin-left: 15px;
+                    width: 85%;
+                }
+                 ::placeholder {
+                    color: $todoBlue;
+                }
+                .add-subtask-btn {
+                    border: none;
+                    outline: none;
+                    color: $todoBlue;
+                    font-weight: 600;
+                    background-color: $white;
+                }
+            }
+            .task-line {
+                border-top: 1px solid lightgray;
+                margin: 0px 15px;
+            }
+            .sub-task-container {
+                .subTaskAddition {
+                    border-bottom: 1px solid lightgray;
+                    display: flex;
+                    margin: 25px 15px;
+                    .fa-check-circle-o {
+                        font-size: 20px;
+                        color: $todoBlue;
+                    }
+                    span {
+                        display: flex;
+                        margin-left: 15px;
+                        width: 100%;
+                    }
+                }
+                .taskCompleted {
+                    text-decoration-line: line-through;
+                    opacity: 0.8;
+                }
+            }
         }
     }
 }

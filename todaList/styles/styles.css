@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'CoversansW05';
+  src: url("/fonts/CoversansW05-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geometr706-Md-BT';
+  src: url("/fonts/Geometric706BT-BlackB.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: #767678;
   font-family: sans-serif;
@@ -5,8 +21,8 @@ body {
   margin: 0;
 }
 
-.ml-10, .left-container .left-block-class .category span, .left-container .newTask .task .taskAddition span {
-  margin-left: 10px;
+.ml-10, .todo-body .left-container-class .left-section-class .left-block-class .category span, .todo-body .left-container-class .left-section-class .taskAddition span {
+  margin-left: 10px !important;
 }
 
 .todo-header {
@@ -45,6 +61,7 @@ body {
   height: 30px;
   margin: auto;
   width: 30%;
+  position: relative;
 }
 
 .todo-header .search i {
@@ -67,37 +84,68 @@ body {
   width: 75%;
 }
 
-.left-container {
-  background-color: #f4f4f5;
-  display: inline-block;
-  height: 90vh;
-  vertical-align: top;
-  width: 22%;
+.todo-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.left-container .left-block-class {
+.todo-body .left-container-class {
+  background-color: #f4f4f5;
+  height: 100vh;
+  width: 25%;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo-body .left-container-class .left-section-class .toggle-button-class {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.todo-body .left-container-class .left-section-class :hover {
+  background-color: rgba(211, 211, 211, 0.39);
+  -webkit-box-shadow: lightgrey;
+          box-shadow: lightgrey;
+  cursor: pointer;
+}
+
+.todo-body .left-container-class .left-section-class .left-block-class {
   margin-top: 40px;
 }
 
-.left-container .left-block-class :hover {
+.todo-body .left-container-class .left-section-class .left-block-class :hover {
   background-color: rgba(255, 255, 255, 0.829);
 }
 
-.left-container .left-block-class .category {
+.todo-body .left-container-class .left-section-class .left-block-class .category {
   cursor: pointer;
   font-size: 14px;
-  padding: 20px 15px;
+  padding: 20px 17px;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
 
-.left-container .newTask {
+.todo-body .left-container-class .left-section-class .taskAddition {
+  cursor: pointer;
+  margin: 25px 0px 0px 15px;
+}
+
+.todo-body .left-container-class .left-section-class .newTask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #465efc;
   margin-top: 20px;
   padding: 20px 15px;
 }
 
-.left-container .newTask .task {
+.todo-body .left-container-class .left-section-class .newTask .task {
+  margin-left: 10px;
   background-color: #f4f4f5;
   border: none;
   outline: none;
@@ -105,28 +153,23 @@ body {
   height: 20px;
 }
 
-.left-container .newTask .task .taskAddition {
-  cursor: pointer;
-  margin: 25px 0px 0px 15px;
-}
-
-.left-container .newTask ::-webkit-input-placeholder {
+.todo-body .left-container-class .left-section-class .newTask ::-webkit-input-placeholder {
   color: #465efc;
 }
 
-.left-container .newTask :-ms-input-placeholder {
+.todo-body .left-container-class .left-section-class .newTask :-ms-input-placeholder {
   color: #465efc;
 }
 
-.left-container .newTask ::-ms-input-placeholder {
+.todo-body .left-container-class .left-section-class .newTask ::-ms-input-placeholder {
   color: #465efc;
 }
 
-.left-container .newTask ::placeholder {
+.todo-body .left-container-class .left-section-class .newTask ::placeholder {
   color: #465efc;
 }
 
-.left-container .newTask .btn {
+.todo-body .left-container-class .left-section-class .newTask .btn {
   border: none;
   color: #465efc;
   font-size: 20px;
@@ -134,11 +177,116 @@ body {
   outline: none;
 }
 
-.left-container .newTask:hover {
+.todo-body .left-container-class .left-section-class .newTask:hover {
   background-color: rgba(255, 255, 255, 0.829);
 }
 
-.left-container .newTask:hover .task {
+.todo-body .left-container-class .left-section-class .newTask:hover .task {
   background-color: rgba(255, 255, 255, 0.829);
+}
+
+.todo-body .right-container {
+  width: 100%;
+  background-color: white;
+}
+
+.todo-body .right-container .right-top-container {
+  width: 100%;
+  height: 10vh;
+  margin: 0px;
+}
+
+.todo-body .right-container .right-top-container .right-heading-class {
+  margin: 30px 20px;
+  color: #465efc;
+  font-weight: 300;
+}
+
+.todo-body .right-container .right-bottom-container {
+  background-color: white;
+  width: 100%;
+  height: 10vh;
+  margin: 0px;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class {
+  margin-left: 20px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class .fa-plus {
+  font-size: 20px;
+  color: #465efc;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class .sub-task-class {
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-weight: 100;
+  margin-left: 15px;
+  width: 85%;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class ::-webkit-input-placeholder {
+  color: #465efc;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class :-ms-input-placeholder {
+  color: #465efc;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class ::-ms-input-placeholder {
+  color: #465efc;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class ::placeholder {
+  color: #465efc;
+}
+
+.todo-body .right-container .right-bottom-container .right-input-class .add-subtask-btn {
+  border: none;
+  outline: none;
+  color: #465efc;
+  font-weight: 600;
+  background-color: white;
+}
+
+.todo-body .right-container .right-bottom-container .task-line {
+  border-top: 1px solid lightgray;
+  margin: 0px 15px;
+}
+
+.todo-body .right-container .right-bottom-container .sub-task-container .subTaskAddition {
+  border-bottom: 1px solid lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px 15px;
+}
+
+.todo-body .right-container .right-bottom-container .sub-task-container .subTaskAddition .fa-check-circle-o {
+  font-size: 20px;
+  color: #465efc;
+}
+
+.todo-body .right-container .right-bottom-container .sub-task-container .subTaskAddition span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.todo-body .right-container .right-bottom-container .sub-task-container .taskCompleted {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=styles.css.map */
