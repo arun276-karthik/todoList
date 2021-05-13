@@ -18,36 +18,66 @@
             <i class="fa fa-th"></i>
             <h3 class="app-name">To Do</h3>
             <div class="search">
-                <i class="fa fa-search"></i><input type="text" class="search-text" placeholder="Search">
-                <!-- <span class="search-tooltip">Search</span> -->
+                <i class="fa fa-search fa-flip-horizontal"></i><input type="text" class="search-text" placeholder="Search">
             </div>
         </div>
         <div class="todo-body">
-            <div class="left-container-class" id="left-container">
-                <div class="left-section-class" id="left-section">
-                    <button class="toggle-button-class" id="toggle-button"><i class="fa fa-chevron-left"></i></button>
-                    <div id="left-block" class="left-block-class">
+            <div class="left-container" id="left_container">
+                <div class="left-section" id="left_section">
+                    <button class="toggle-button" id="toggle_button"><i class="fa fa-chevron-left"></i></button>
+                    <div id="left_block" class="left-block">
                     </div>
-                    <div class="newTask">
+                    <div class="newCategory">
                         <i class='fa fa-plus'></i>
-                        <input type='text' class='task' id="add-task" placeholder='New list'>
-                        <button class='btn' id="add-btn"><i class="fa fa-tasks"></i></button>
+                        <input type='text' class='task' id="add-category" placeholder='New list'>
+                        <button class='btn' id="category-btn"><i class="fa fa-tasks"></i></button>
                     </div>
                 </div>
             </div>
-            <div class="right-container">
-                <div class="right-top-container" id="right-top-block">
-                    <div class="right-heading-class" id="right-heading">
+            <div class="middle-container" id="middle_container">
+                <div class="middle-top-container" id="middle_top_container">
+                    <div class="middle-heading" id="middle_heading">
                     </div>
                 </div>
-                <div class="right-bottom-container" id="right-bottom-block">
-                    <div class="right-input-class" id="right-input">
+                <div class="middle-bottom-container" id="middle_bottom_container">
+                    <div class="task-input" id="task_input">
                         <i class="fa fa-plus"></i>
-                        <input type="text" class="sub-task-class" id="sub-task" placeholder="Add a task">
-                        <span><button class="add-subtask-btn" id="add-task-btn">ADD</button></span>
+                        <input type="text" class="add-task-input" id="add_task_input" placeholder="Add a task">
+                        <span><button class="add-task-btn" id="add_task_btn">ADD</button></span>
                     </div>
                     <div class="task-line"></div>
-                    <div class="sub-task-container" id="sub-task-block"></div>
+                    <div class="task-display" id="task_display"></div>
+                </div>
+            </div>
+            <div class="right-container" id="right_container">
+                <div class="task-step">
+                    <div class="task-title" id="task_title">
+                    </div>
+                    <div class="step" id="steptasks"></div>
+                    <div class="add-step" id="add_step"><i class="fa fa-plus"></i>
+                        <input type="text " class="input-task-step" id="input_task_step" placeholder="Add step">
+                    </div>
+                </div>
+                <div class="myday">
+                    <i class="fa fa-sun-o"></i><span>Add to My Day</span>
+                </div>
+                <div class="reminder">
+                    <ul>
+                        <li><i class="fa fa-bell-o"></i><span>Remind me</span></li>
+                        <hr>
+                        <li><i class="fa fa-calendar"></i><span>Add due date</span></li>
+                        <hr>
+                        <li><i class="fa fa-repeat"></i><span>Repeat</span></li>
+                    </ul>
+                </div>
+                <div class="pick-category">
+                    <i class="fa fa-tag"></i><span>Pick a category</span>
+                </div>
+                <div class="add-file">
+                    <i class="fa fa-paperclip"></i><span>Add file</span>
+                </div>
+                <div class="empty-box">
+
                 </div>
             </div>
         </div>
