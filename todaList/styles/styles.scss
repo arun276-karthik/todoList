@@ -274,9 +274,9 @@ body {
             }
         }
     }
-    .visible-middle {
-        display: block;
-    }
+    // .visible-middle {
+    //     display: block;
+    // }
     .right-container {
         background-color: $categoryInput;
         display: none;
@@ -355,6 +355,9 @@ body {
                 margin: 20px 10px;
             }
         }
+        .myday:hover {
+            background-color: $todoGrey;
+        }
         .reminder {
             background-color: $white;
             border: 12px solid $todoGrey;
@@ -365,14 +368,18 @@ body {
                 padding: 0px;
             }
             li {
-                margin: 20px 0px;
+                padding: 20px 0px;
+                margin: 1px solid $darkGrey;
+            }
+            li:hover {
+                background-color: $todoGrey;
             }
             i {
                 margin: 0px 10px;
             }
             hr {
                 border-top: 1px solid $todoLightGrey;
-                margin: 0px 0px 10px 30px;
+                margin: 0px 0px 0px 30px;
             }
         }
         .pick-category {
@@ -382,6 +389,9 @@ body {
                 margin: 20px 10px;
             }
         }
+        .pick-category:hover {
+            background-color: $todoGrey;
+        }
         .add-file {
             outline: 1px solid $darkGrey;
             @extend .whiteBox;
@@ -389,13 +399,16 @@ body {
                 margin: 20px 10px;
             }
         }
+        .add-file:hover {
+            background-color: $todoGrey;
+        }
         .empty-box {
             height: 15vh;
             outline: 1px solid $darkGrey;
             @extend .whiteBox;
         }
     }
-    .visible-right {
-        display: block;
-    }
+    // .visible-right {
+    //     display: block;
+    // }
 }

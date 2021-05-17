@@ -482,6 +482,10 @@ body {
   margin: 20px 10px;
 }
 
+.todo-body .right-container .myday:hover {
+  background-color: #f4f4f5;
+}
+
 .todo-body .right-container .reminder {
   background-color: #ffffff;
   border: 12px solid #f4f4f5;
@@ -495,7 +499,12 @@ body {
 }
 
 .todo-body .right-container .reminder li {
-  margin: 20px 0px;
+  padding: 20px 0px;
+  margin: 1px solid #e0e0e2;
+}
+
+.todo-body .right-container .reminder li:hover {
+  background-color: #f4f4f5;
 }
 
 .todo-body .right-container .reminder i {
@@ -504,7 +513,7 @@ body {
 
 .todo-body .right-container .reminder hr {
   border-top: 1px solid #d3d3d3;
-  margin: 0px 0px 10px 30px;
+  margin: 0px 0px 0px 30px;
 }
 
 .todo-body .right-container .pick-category {
@@ -515,12 +524,20 @@ body {
   margin: 20px 10px;
 }
 
+.todo-body .right-container .pick-category:hover {
+  background-color: #f4f4f5;
+}
+
 .todo-body .right-container .add-file {
   outline: 1px solid #e0e0e2;
 }
 
 .todo-body .right-container .add-file .fa-paperclip {
   margin: 20px 10px;
+}
+
+.todo-body .right-container .add-file:hover {
+  background-color: #f4f4f5;
 }
 
 .todo-body .right-container .empty-box {
